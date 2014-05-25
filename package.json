@@ -3,7 +3,7 @@
   "main": "./lib/hermeneumatics",
   "version": "0.0.0",
   "description": "Maya Writing Hermeneumatics in Atom",
-  "activationEvents": ["hermeneumatics:toggle"],
+  "activationEvents": ["hermeneumatics:open-image"],
   "repository": "https://github.com/ignaciocases/hermeneumatics",
   "license": "MIT",
   "engines": {

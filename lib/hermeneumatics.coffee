@@ -1,6 +1,9 @@
 _ = require "underscore-plus"
 hermeneumaticsView = require './hermeneumatics-view'
 HNProvider = require "./hn-provider"
+ImageEditor = require 'image-view'
+path = require 'path'
+
 
 module.exports =
   editorSubscription: null
@@ -16,6 +19,18 @@ module.exports =
       .then (pkg) =>
         @autocomplete = pkg.mainModule
         @registerProviders()
+
+    atom.workspaceView.command "hermeneumatics:open-image", => @openImage()
+
+  openImage: ->
+    editor = atom.workspace.activePaneItem
+    match = editor.getBuffer().getText().match(/@imageFile: .*[\.jpg|tiff|png|gif]/i)
+    if match
+      fileNames = match[0].split("@imageFile: ")
+      fileName = (fileNames.filter (e) -> e != "")[0]
+      atom.workspaceView.open(atom.project.getPath()+'/hn/maya/images/'+fileName[0..2]+"/"+fileName)
+      #imageEditor = new ImageEditor(path.join(__dirname, '/hn/maya/images/TIK/', fileName))
+
 
   ###
    * Registers a SnippetProvider for each editor view
