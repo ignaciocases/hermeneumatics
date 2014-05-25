@@ -1,0 +1,29 @@
+'name': "HN"
+'fileTypes': [
+  'hn'
+]
+'patterns': [
+  {
+    'begin': '(<\\?)\\s*([-_a-zA-Z0-9]+)'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.tag.hn'
+      '2':
+        'name': 'entity.name.tag.hn'
+    'end': '(\\?>)'
+    'name': 'meta.tag.preprocessor.hn'
+    'patterns': [
+      {
+        'match': ' ([a-zA-Z-]+)'
+        'name': 'entity.other.attribute-name.hn'
+      }
+      {
+        'include': '#doublequotedString'
+      }
+      {
+        'include': '#singlequotedString'
+      }
+    ]
+  }
+]
+'scopeName': 'source.hn'

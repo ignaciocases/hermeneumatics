@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable Hermeneumatics': 'hermeneumatics:toggle'
+
+'menu': [
+  {
+    'label': 'Hermeneumatics'
+    'submenu': [
+      'label': 'Testing'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'hermeneumatics:toggle' }
+      ]
+    ]
+  }
+]
