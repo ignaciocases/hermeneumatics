@@ -1,7 +1,7 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
   '.overlayer':
-      'Enable Hermeneumatics': 'hermeneumatics:open-image'
+      'Open HN Image': 'hermeneumatics:open-image'
 
 'menu': [
   {
@@ -9,7 +9,7 @@
     'submenu': [
       'label': 'Testing'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'hermeneumatics:open-image' }
+        { 'label': 'Open Image', 'command': 'hermeneumatics:open-image' }
       ]
     ]
   }

@@ -3,7 +3,7 @@ hermeneumaticsView = require './hermeneumatics-view'
 HNProvider = require "./hn-provider"
 ImageEditor = require 'image-view'
 path = require 'path'
-
+example = require './example'
 
 module.exports =
   editorSubscription: null
@@ -29,6 +29,7 @@ module.exports =
       fileNames = match[0].split("@imageFile: ")
       fileName = (fileNames.filter (e) -> e != "")[0]
       atom.workspaceView.open(atom.project.getPath()+'/hn/maya/images/'+fileName[0..2]+"/"+fileName)
+      console.log(example.helloWorld__T__(" from Coffeescript" + fileName))
       #imageEditor = new ImageEditor(path.join(__dirname, '/hn/maya/images/TIK/', fileName))
 
 

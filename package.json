@@ -2,6 +2,7 @@
   "name": "hermeneumatics",
   "main": "./lib/hermeneumatics",
   "version": "0.0.0",
+  "author": "Ignacio Cases",
   "description": "Maya Writing Hermeneumatics in Atom",
   "activationEvents": ["hermeneumatics:open-image"],
   "repository": "https://github.com/ignaciocases/hermeneumatics",
@@ -14,6 +15,7 @@
     "autocomplete-plus": "git://github.com/saschagehlich/autocomplete-plus.git",
     "fuzzaldrin": "~1.0.0",
     "node-rest-client": "~0.8.6",
-    "image-view": "~0.33.0"
+    "image-view": "~0.33.0",
+    "scala-node": "~0.2.0"
   }
 }
